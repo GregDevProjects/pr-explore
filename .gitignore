@@ -36,3 +36,4 @@ yarn-error.log*
 
 # windows npm stuff
 /tmpnodejsnpm-cache
+tmpnodejsnpm-cache/

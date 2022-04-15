@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import App from "../src/App";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -9,7 +11,9 @@ const Home: NextPage = () => {
         <meta name="description" content="Explore PRs for a selected repo" />
       </Head>
 
-      <main></main>
+      <main>
+        <App />
+      </main>
     </>
   );
 };
