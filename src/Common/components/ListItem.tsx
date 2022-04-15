@@ -3,18 +3,31 @@ import ListItemText from "@mui/material/ListItemText";
 
 type ListItemProps = {
   text: string;
-  selected: boolean;
-  onClick: (text: string) => void;
+  selected?: boolean;
+  onClick?: (text: string) => void;
+  customClasses?: object;
 };
 
-const ListItem = ({ text, selected, onClick }: ListItemProps) => {
+const ListItem = ({
+  text,
+  selected,
+  onClick,
+  customClasses,
+}: ListItemProps) => {
   const handleClick = () => {
+    if (!onClick) {
+      return;
+    }
     onClick(text);
   };
 
   return (
     <>
-      <ListItemButton selected={selected} onClick={() => handleClick()}>
+      <ListItemButton
+        sx={customClasses}
+        selected={selected}
+        onClick={() => handleClick()}
+      >
         <ListItemText primary={text} />
       </ListItemButton>
     </>
