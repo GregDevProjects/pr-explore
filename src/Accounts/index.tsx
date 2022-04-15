@@ -2,7 +2,7 @@ import { useState } from "react";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 
-import ListItem from "./ListItem";
+import ListItem from "../Common/components/ListItem";
 
 type AccountsProps = {
   accounts: string[];
@@ -26,7 +26,7 @@ const Accounts = ({ accounts, onClick }: AccountsProps) => {
       <Box
         sx={{ width: "100%", maxWidth: "100%", bgcolor: "background.paper" }}
       >
-        <List component="nav" aria-label="main mailbox folders">
+        <List>
           {accounts.map((anAccount, i) => (
             <ListItem
               key={`anAccount-${i}`}

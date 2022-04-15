@@ -1,17 +1,32 @@
-import Accounts from "../Accounts";
+import { useState } from "react";
 
-const accounts = ["react", "vue", "angular"];
+import Accounts from "../Accounts";
+import Repositories from "../Repositories";
+
+const accounts = ["facebook", "vue", "angular"];
 
 const App = () => {
+  const [selectedAccount, setSelectedAccount] = useState("");
+
   const handleAccountsClick = (account: string) => {
-    console.log(account);
+    setSelectedAccount(account);
+  };
+
+  const handleRepositoriesClick = (repository: string) => {
+    console.log(repository);
   };
 
   return (
-    <Accounts
-      onClick={(account) => handleAccountsClick(account)}
-      accounts={accounts}
-    />
+    <>
+      <Accounts
+        onClick={(account) => handleAccountsClick(account)}
+        accounts={accounts}
+      />
+      <Repositories
+        accountName={selectedAccount}
+        onClick={(repository) => handleRepositoriesClick(repository)}
+      />
+    </>
   );
 };
 
