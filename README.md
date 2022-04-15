@@ -14,12 +14,12 @@ Due to time constraints, I’ll focus on delivering the MVP first and adding the
 
 ## Nice to haves
 
-1. Add four evenly sized elements to the bottom of the app 
+1. Add four evenly sized elements to the bottom of the app
 2. Unit tests
 3. Pagination for the repositories/prs/accounts
-4. Use authenticated requests for the Github API 
-5. Update the URL when a Repo is selected, so that application state can be bookmarked/shared 
-6. A way to filter/search for repositories/prs/accounts 
+4. Use authenticated requests for the Github API
+5. Update the URL when a Repo is selected, so that application state can be bookmarked/shared
+6. A way to filter/search for repositories/prs/accounts
 
 ## Running the project
 
