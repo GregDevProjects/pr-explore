@@ -12,7 +12,7 @@ Due to time constraints, I’ll focus on delivering the MVP first and adding the
 6. PRs component https://github.com/GregDevProjects/pr-explore/issues/6
 7. App component https://github.com/GregDevProjects/pr-explore/issues/7
 
-## Nice to have
+## Nice to haves
 
 1. Add four evenly sized elements to the bottom of the app 
 2. Unit tests
