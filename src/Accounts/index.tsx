@@ -22,22 +22,16 @@ const Accounts = ({ accounts, onClick }: AccountsProps) => {
   }
 
   return (
-    <>
-      <Box
-        sx={{ width: "100%", maxWidth: "100%", bgcolor: "background.paper" }}
-      >
-        <List>
-          {accounts.map((anAccount, i) => (
-            <ListItem
-              key={`anAccount-${i}`}
-              onClick={(text) => handleListItemClick(text, i)}
-              selected={selectedIndex === i}
-              text={anAccount}
-            />
-          ))}
-        </List>
-      </Box>
-    </>
+    <List>
+      {accounts.map((anAccount, i) => (
+        <ListItem
+          key={`anAccount-${i}`}
+          onClick={(text) => handleListItemClick(text, i)}
+          selected={selectedIndex === i}
+          text={anAccount}
+        />
+      ))}
+    </List>
   );
 };
 

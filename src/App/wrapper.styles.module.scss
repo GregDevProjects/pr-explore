@@ -1,0 +1,18 @@
+//adjust this to change the height of the Wrappers
+$wrapperHeight: 22rem;
+//should be the same size as the columnSpacing prop on the Grid container in src\App\index.tsx
+$gridPadding: 1rem;
+//https://mui.com/material-ui/customization/breakpoints/
+$breakpoint-md: 900px;
+
+.wrapper {
+  height: $wrapperHeight;
+  margin-bottom: $gridPadding;
+}
+
+.wrapperTall {
+  height: $wrapperHeight + $wrapperHeight + $gridPadding;
+  @media (max-width: $breakpoint-md) {
+    height: $wrapperHeight;
+  }
+}
