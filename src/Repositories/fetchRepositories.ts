@@ -1,8 +1,9 @@
+import httpRequest from "../Common/helpers/httpRequest";
+
 const fetchRepositories = async (accountName: string) => {
   const repositoryUrl = `https://api.github.com/users/${accountName}/repos`;
-  const results = await fetch(repositoryUrl);
-  const resultsJson = await results.json();
-  return transformRepositories(resultsJson);
+  const results = await httpRequest(repositoryUrl);
+  return transformRepositories(results);
 };
 
 const transformRepositories = (apiResponse: Array<any>) => {

@@ -1,13 +1,13 @@
 import dayjs from "dayjs";
+import httpRequest from "../Common/helpers/httpRequest";
 
 const fetchPullRequests = async (
   accountName: string,
   repositoryName: string
 ) => {
   const pullRequestUrl = `https://api.github.com/repos/${accountName}/${repositoryName}/pulls`;
-  const results = await fetch(pullRequestUrl);
-  const resultsJson = await results.json();
-  return transformPullRequests(resultsJson);
+  const results = await httpRequest(pullRequestUrl);
+  return transformPullRequests(results);
 };
 
 const transformPullRequests = (apiResponse: Array<any>) => {
