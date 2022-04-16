@@ -22,6 +22,7 @@ Due to time constraints, I’ll focus on delivering the MVP first and adding the
 6. A way to filter/search for repositories/prs/accounts
 7. Show an error message to the user on a failed call to the Github API (MUI's [snackbar](https://mui.com/material-ui/react-snackbar/) could be used for this)
 8. Show a loading indicator while fetching from the Github API (MUI's [progress](https://mui.com/material-ui/react-progress/) could be used for this)
+9. Setup a CI server to test if the project still builds, if it passes the linter, and if it passes the unit tests. Github actions could be used for this.
 
 ## Known issues
 
