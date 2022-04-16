@@ -14,12 +14,19 @@ Due to time constraints, I’ll focus on delivering the MVP first and adding the
 
 ## Nice to haves
 
-1. Add four evenly sized elements to the bottom of the app
-2. Unit tests
+1. Add four evenly sized elements to the bottom of the app https://github.com/GregDevProjects/pr-explore/issues/8
+2. Unit tests https://github.com/GregDevProjects/pr-explore/issues/9
 3. Pagination for the repositories/prs/accounts
 4. Use authenticated requests for the Github API
-5. Update the URL when a Repo is selected, so that application state can be bookmarked/shared
+5. Update the URL when a Repo is selected, so that application state can be bookmarked/shared by users
 6. A way to filter/search for repositories/prs/accounts
+7. Show an error message to the user on a failed call to the Github API (MUI's [snackbar](https://mui.com/material-ui/react-snackbar/) could be used for this)
+8. Show a loading indicator while fetching from the Github API (MUI's [progress](https://mui.com/material-ui/react-progress/) could be used for this)
+
+## Known issues
+
+1. The PR list items have a hover effect and the cursor changes to a pointer. This gives the impression that they are clickable, which they are not, so they should be removed.
+2. There's a lack of in-code documentation on the functions/components. The types are documented through typescript, but it would even better to provide a brief description on how the component and the parameters provided to each component should be used. Something like [JSDoc](https://jsdoc.app/) could be used as a standard for this.
 
 ## Running the project
 
