@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import styles from "./wrapper.styles.module.scss";
 
 type AccountsProps = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   title: string;
   tall?: boolean;
 };

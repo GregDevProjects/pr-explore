@@ -5,7 +5,8 @@ import Accounts from "../Accounts";
 import PullRequests from "../PullRequests";
 import Repositories from "../Repositories";
 import styles from "./index.styles.module.scss";
-import Wrapper from "./wrapper";
+import Wrapper from "../Common/components/Wrapper";
+import Spacer from "../Spacer";
 
 const accounts = ["facebook", "vue", "angular"];
 
@@ -51,7 +52,7 @@ const App = () => {
             </Wrapper>
           )}
         </Grid>
-        <Grid className={styles.offsetGrid} item md={5} lg={5} />
+        <Spacer />
       </Grid>
     </div>
   );
