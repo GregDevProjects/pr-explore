@@ -44,7 +44,7 @@ const App = () => {
             </Wrapper>
           )}
           {selectedAccount && selectedRepository && (
-            <Wrapper title="PullRequests">
+            <Wrapper title="PullRequests" sx={{ mt: 2 }}>
               <PullRequests
                 accountName={selectedAccount}
                 repositoryName={selectedRepository}

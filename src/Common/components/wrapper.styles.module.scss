@@ -3,11 +3,11 @@ $wrapperHeight: 22rem;
 //should be the same size as the columnSpacing prop on the Grid container in src\App\index.tsx
 $gridPadding: 1rem;
 //https://mui.com/material-ui/customization/breakpoints/
+//variables like this should usually be placed in a global scss file
 $breakpoint-md: 900px;
 
 .wrapper {
   height: $wrapperHeight;
-  margin-bottom: $gridPadding;
 }
 
 .wrapperTall {
