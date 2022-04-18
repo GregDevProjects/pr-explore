@@ -1,6 +1,6 @@
-interface RepositoriesResults {
+interface PullRequestResults {
   title: string;
   daysOld: number;
 }
 
-export type { RepositoriesResults };
+export type { PullRequestResults };

@@ -34,18 +34,16 @@ const Repositories = ({ accountName, onClick }: RepositoriesProps) => {
   });
 
   return (
-    <>
-      <List>
-        {repositories.map((aRepository, i) => (
-          <ListItem
-            key={`aRepository-${i}`}
-            onClick={(text) => handleListItemClick(text, i)}
-            selected={selectedIndex === i}
-            text={aRepository.name}
-          />
-        ))}
-      </List>
-    </>
+    <List>
+      {repositories.map((aRepository, i) => (
+        <ListItem
+          key={`aRepository-${i}`}
+          onClick={(text) => handleListItemClick(text, i)}
+          selected={selectedIndex === i}
+          text={aRepository.name}
+        />
+      ))}
+    </List>
   );
 };
 

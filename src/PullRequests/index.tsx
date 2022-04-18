@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import List from "@mui/material/List";
 
-import { RepositoriesResults } from "./interfaces";
+import { PullRequestResults } from "./interfaces";
 import fetchPullRequests from "./fetchPullRequests";
 import ListItem from "../Common/components/ListItem";
 
@@ -11,7 +11,7 @@ type PullRequestsProps = {
 };
 
 const PullRequests = ({ accountName, repositoryName }: PullRequestsProps) => {
-  const [repositories, setRepositories] = useState<[] | RepositoriesResults[]>(
+  const [pullRequests, setPullRequests] = useState<[] | PullRequestResults[]>(
     []
   );
 
@@ -21,8 +21,8 @@ const PullRequests = ({ accountName, repositoryName }: PullRequestsProps) => {
     }
 
     const getPullRequests = async () => {
-      const repositories = await fetchPullRequests(accountName, repositoryName);
-      setRepositories(repositories);
+      const pullRequests = await fetchPullRequests(accountName, repositoryName);
+      setPullRequests(pullRequests);
     };
     getPullRequests();
   });
@@ -41,7 +41,7 @@ const PullRequests = ({ accountName, repositoryName }: PullRequestsProps) => {
 
   return (
     <List>
-      {repositories.map((aPullRequest, i) => {
+      {pullRequests.map((aPullRequest, i) => {
         const text = `(${aPullRequest.daysOld} days) ${aPullRequest.title}`;
         return (
           <ListItem
